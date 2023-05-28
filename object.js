@@ -39,3 +39,32 @@ sai1.greet = function(){
 }
 
 sai1.greet()
+
+// Getter and setter 
+
+const employee = {
+    firstname : 'prasath'
+
+}
+
+// getter property
+
+Object.defineProperty(employee, "getname",{
+    get : function(){
+        return this.firstname
+    }
+})
+
+// setting property
+
+Object.defineProperty(employee, "changename",{
+    set : function (value) {
+        this.firstname = value 
+    }
+} )
+
+console.log(employee.firstname)
+
+employee.changename = 'prasu'
+
+console.log(employee.firstname)
