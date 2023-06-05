@@ -48,7 +48,6 @@ const employee = {
 }
 
 // getter property
-
 Object.defineProperty(employee, "getname",{
     get : function(){
         return this.firstname
