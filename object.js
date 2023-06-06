@@ -67,3 +67,20 @@ console.log(employee.firstname)
 employee.changename = 'prasu'
 
 console.log(employee.firstname)
+
+
+//prototype  
+
+function Person (){
+    this.name = 'kannan'
+    this.age = 21
+}
+
+const cithapa = new Person()
+const cithapa1 = new Person()
+
+Person.prototype.meet = function(){
+    console.log('hello', this.name)
+}
+cithapa.meet()
+cithapa1.meet()
