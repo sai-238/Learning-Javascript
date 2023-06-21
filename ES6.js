@@ -92,3 +92,12 @@ console.log(map1.get(obj))
 console.log(map1.has(obj))
 console.log(map1.delete(obj))
 console.log(map1)
+
+
+let map3 = new Map ()
+map3.set ('name', 'ezhil ')
+map3.set ('age', 20)
+
+for (let elem of map3.entries()){
+    console.log(`${elem[0]} : ${elem[1]}`)
+}
