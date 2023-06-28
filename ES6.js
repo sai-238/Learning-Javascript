@@ -101,3 +101,108 @@ map3.set ('age', 20)
 for (let elem of map3.entries()){
     console.log(`${elem[0]} : ${elem[1]}`)
 }
+
+
+// Javascript set 
+
+const set1 = new Set([1,2,3])
+console.log(set1)
+set1.add(4)
+console.log(set1.values())
+
+// Javascript Destruction Assignment 
+
+const viper = {
+    name1 : 'captian',
+    age1 : '57',
+    gender1 : 'Male'
+}
+
+let { name1 , age1 , gender1, occupation = 'super hero'} = viper 
+
+console.log(name1)
+console.log(age1)
+console.log(gender1)
+console.log(occupation)
+
+// Javascript Class
+
+class car {
+    constructor ( model){
+    this.model = model
+    }
+    get carmodel(){
+        return this.model
+    }
+    set carmodel (x){
+        this.model = x
+    }
+}
+let car1 = new car('Benz')
+console.log(car1.model)
+
+car1.carmodel = 'Bugati'
+console.log(car1.model) 
+
+// javascript calss inheritence
+
+class collage {
+    constructor (fame){
+    this.fame = fame
+    this.occu = 'unemployed'
+    }
+    geet(){
+        console.log(`Hello ${this.fame}`)
+    }
+}   
+
+class aiml extends collage {
+    constructor (fame){
+
+    super(fame)
+    this.occu = 'Multi millionare'
+    }
+    greet (){
+        console.log(`Hello Student : ${this.fame} `)
+        console.log(`occupation : ${this.occu}`)
+    }
+}
+
+let p = new aiml ('Harjeet')
+p.greet()
+
+
+// Javascript Proxies 
+
+let std = {
+    name : 'Priya',
+    age : 20 
+}
+
+const handler = {
+    get(obj, prop){
+    if (prop == 'name'){
+        return obj[prop]
+    }
+    if (prop == 'age'){
+        return obj[prop]
+    }
+    else {
+        return 'not allowed'
+    }
+  }
+}
+
+let setnewvalue = {
+    set: function(obj , prop , value){
+        obj[prop] = value
+        return 
+    }
+}
+let per = new Proxy(std, setnewvalue)
+per.mentastate = 'paaithiyam'
+const proxy = new Proxy(std , handler)
+console.log(proxy.name)
+console.log(proxy.age)
+console.log(per.mentastate)
+
