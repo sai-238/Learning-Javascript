@@ -1,7 +1,7 @@
 // const num = prompt('Enter the number:')
 // const n = 100
 
-// // if else loop
+// if else loop
 // if (num > 0){
 //     console.log('The number is positive')
 //     document.write('The number is positive <br>')
@@ -14,7 +14,7 @@
 // document.write('The if statement is done <br>') 
 
 
-// // for loop 
+// for loop 
 // let sum = 0 
 
 // for (let i = 0; i<=n; i++){
@@ -23,7 +23,7 @@
 // document.write('sum = ',sum)
 
 
-// // While loop
+// While loop
 // let sum = 0;
 
 // let number = parseInt(prompt('Enter a number: '));
@@ -34,8 +34,8 @@
 // } while(number >= 0)
 // document.write(`The sum is ${sum}.`);
 
-// // Switch Continue and Break statement's
-// // Simple Calculator 
+// Switch Continue and Break statement's
+// Simple Calculator 
 let result 
 const operator = prompt('Enter the operator you want')
 
